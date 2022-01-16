@@ -44,4 +44,4 @@ def predict():
 
     return jsonify(Result=result[0])
 
-app.run(debug=True)
+app.run()
