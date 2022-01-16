@@ -24,7 +24,7 @@ cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
 @app.route('/')
 def home():
-    return 'Data Science Project API'
+    return '<h1>Data Science Project API</h1>'
 
 @app.route('/predict', methods=['POST'])
 def predict():
