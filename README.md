@@ -16,7 +16,8 @@ Após a clonagem do projeto, utilize os seguintes comandos para criação virtua
 
 Para a executar aplicação, utilize os seguintes comandos:
 
->1 - .\venv\Scripts\activate
->2 - python main.py
+>.\venv\Scripts\activate
+>
+>python main.py
 
 - Obs: utilize a ferramenta de sua preferência para consumo da API.
