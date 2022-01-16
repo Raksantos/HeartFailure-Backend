@@ -22,6 +22,8 @@ ro_scaler = pickle.load(open('ro_scaler.sav', 'rb'))
 app = app = Flask(__name__)
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
+#just leaving a comment
+
 @app.route('/')
 def home():
     return '<h1>Data Science Project API</h1>'
