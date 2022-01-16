@@ -16,8 +16,6 @@ columns=["Idade (anos)", "Pressão sanguínea em repouso (mm Hg)",
        "Inclinação do segmento ST de pico do exercício_Flat",
        "Inclinação do segmento ST de pico do exercício_Up"]
 
-#teste
-
 model = pickle.load(open('knn_model.sav', 'rb'))
 ro_scaler = pickle.load(open('ro_scaler.sav', 'rb'))
 
