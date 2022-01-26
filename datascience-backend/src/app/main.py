@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import pandas as pd
 import pickle
 from flask_cors import CORS
+import os
 
 columns=["Idade (anos)", "Pressão sanguínea em repouso (mm Hg)",
        "Colesterol (mm/dl)", "Açúcar no sangue em jejum",
@@ -16,8 +17,8 @@ columns=["Idade (anos)", "Pressão sanguínea em repouso (mm Hg)",
        "Inclinação do segmento ST de pico do exercício_Flat",
        "Inclinação do segmento ST de pico do exercício_Up"]
 
-model = pickle.load(open('knn_model.sav', 'rb'))
-ro_scaler = pickle.load(open('ro_scaler.sav', 'rb'))
+model = pickle.load(open('../../models/knn_model.sav', 'rb'))
+ro_scaler = pickle.load(open('../../models/ro_scaler.sav', 'rb'))
 
 app = app = Flask(__name__)
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
@@ -44,4 +45,6 @@ def predict():
 
     return jsonify(Result=result[0])
 
-app.run()
+if __name__ == "__main__":
+  port = os.getenv("PORT", 5000)
+  app.run(debug=False, host="0.0.0.0", port=port)
