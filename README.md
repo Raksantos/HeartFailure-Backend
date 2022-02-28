@@ -1,4 +1,4 @@
-datascience-backend
+Heart Failure Backend
 ==============================
 
 Backend desenvolvido para a disciplina de data science no IC-UFAL
